@@ -1,0 +1,41 @@
+.conteiner {
+  width: 600px;
+  margin: auto;
+  /* background-color: aqua; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  width: 100px;
+  margin: auto;
+}
+
+#inputer {
+  width: 50px;
+  margin: auto;
+}
+
+#box {
+  background-color: antiquewhite;
+  height: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 600px;
+}
+
+.palette {
+  display: flex;
+}
+
+p {
+  background-color: rgb(165, 99, 1);
+}
+
+
+.color-cell {
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  cursor: pointer;
+}
