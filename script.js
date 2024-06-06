@@ -16,6 +16,7 @@ function setElementToBox() {
   div.style.width = div.style.height = '50px'
   let rgb = getRGB();
   div.style.backgroundColor = rgb;
+  div.style.margin = "5px";
   // div.style.justifyContent = 'center';
   // div.style.alignItems = 'center';
   // let p = document.createElement('p')
@@ -28,11 +29,14 @@ function setElementToBox() {
   //   document.querySelector('.root').insertAdjacentElement('beforeend', div)
   return div
 }
-
+const box = document.querySelector('#box');
+let count = 0;
 document.querySelectorAll('button')[0].addEventListener('click', () => {
-  document.querySelector('#box').appendChild(setElementToBox())
-
-
+  box.style.display = "flex";
+  count++;
+  if (count <= 20) {
+    box.appendChild(setElementToBox());
+  }
 
 })
 
@@ -44,6 +48,29 @@ document.querySelectorAll('.color-cell').forEach(cell => {
   })
 })
 
+
+document.getElementById('commentForm').addEventListener('submit', function (event) {
+
+
+  const name = document.getElementById('name_in').value;
+  const text = document.getElementById('text_area').value;
+  const date = new Date().toLocaleString();
+
+  const commentSection = document.getElementById('comments');
+  const newComment = document.createElement('div');
+  newComment.classList.add('comment');
+
+  newComment.innerHTML = `
+      <h5 style="margin:0;" class="name">${name}</h5>
+      <small style="margin:0;" class="date">${date}</small>
+      <p style="margin:0;" class="text">${text}</p>
+  `;
+
+  commentSection.appendChild(newComment);
+  event.preventDefault();
+
+  document.getElementById('commentForm').reset();
+});
 
 
 

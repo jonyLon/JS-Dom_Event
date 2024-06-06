@@ -22,18 +22,24 @@ button {
 
 #box {
   background-color: antiquewhite;
-  height: 100px;
+  height: 120px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 600px;
+}
+
+#plate-conteiner {
+  margin: 30px 0;
 }
 
 .palette {
   display: flex;
+  background-color: rgb(248, 202, 142);
 }
 
 p {
-  background-color: rgb(165, 99, 1);
+  background-color: rgb(250, 205, 138);
+  font-size: larger;
 }
 
 
@@ -42,4 +48,33 @@ p {
   height: 30px;
   margin: 2px;
   cursor: pointer;
+}
+
+#text_area {
+  margin: 0 20px;
+  height: 200px;
+  width: 300px;
+}
+
+#name_in {
+  margin: 0 60px;
+  height: 30px;
+  width: 300px;
+}
+
+.com {
+  margin: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#article_box {
+  width: 800px;
+  background-color: bisque;
+
+}
+
+
+.comment {
+  margin: 20px;
 }
