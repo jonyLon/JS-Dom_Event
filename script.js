@@ -13,10 +13,9 @@ let getRGB = () => `rgb(${getRandom()},${getRandom()},${getRandom()})`
 
 function setElementToBox() {
   let div = document.createElement('div')
-  div.style.width = div.style.height = '100px'
+  div.style.width = div.style.height = '50px'
   let rgb = getRGB();
   div.style.backgroundColor = rgb;
-  // div.style.display = 'flex';
   // div.style.justifyContent = 'center';
   // div.style.alignItems = 'center';
   // let p = document.createElement('p')
@@ -32,6 +31,9 @@ function setElementToBox() {
 
 document.querySelectorAll('button')[0].addEventListener('click', () => {
   document.querySelector('#box').appendChild(setElementToBox())
+
+
+
 })
 
 
